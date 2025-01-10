@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('backgroundimage.avif'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .form-container {
+    background-color: rgba(16, 105, 134, 0.9); /* Light Blue background */
+    margin: 50px auto;
+    width: 35%;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: navy;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .form-container label {
+            display: block;
+            font-size: 1rem;
+            font-weight: bold;
+            color: darkblue;
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 48%;
+            padding: 10px;
+            margin: 10px 1%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        .form-container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: navy;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .form-container button:hover {
+            background-color: darkblue;
+        }
+
+        .rating-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .rating-section input[type="radio"] {
+            display: none;
+        }
+
+        .rating-section label {
+            font-size: 2rem;
+            color: lightgray;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .rating-section input[type="radio"]:checked ~ label {
+            color: gold;
+        }
+
+        .rating-section label:hover,
+        .rating-section label:hover ~ label {
+            color: gold;
+        }
+
+        .rating-label {
+            margin-top: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Feedback Form</h1>
+        <form>
+            <input type="text" name="fullname" placeholder="Fullname*" required>
+            <input type="email" name="email" placeholder="Email*" required>
+            <input type="number" name="phone" placeholder="Phone*" required>
+           <br>
+
+            <div class="rating-section">
+                <p class="rating-label">Rate Us:</p>
+                <input type="radio" id="star5" name="rating" value="Excellent">
+                <label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="Very Good">
+                <label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="Good">
+                <label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="Average">
+                <label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="Poor">
+                <label for="star1">&#9733;</label>
+            </div>
+            <textarea name="message" placeholder="Feedback" required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
